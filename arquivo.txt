@@ -1,0 +1,68 @@
+programa
+{
+	
+	inteiro quantidade = 0
+	real valor = 0.0, dinheiro = 0.0
+	caracter escolhe
+		
+	funcao inicio()
+	{
+		inteiro opcao = 0
+		
+		limpa()
+		menu(opcao)
+		}
+		
+		funcao menu(inteiro opcao){
+			escreva("CARDÁPIO \n \n" )
+		escreva("1 – X-Salada 6.O \n")
+		escreva("2 – X-Bacon 12.0 \n")
+		escreva("3 – X-Egg 15.0 \n")
+		escreva("4 – Refrigerante 8.0 \n")
+		escreva("O que deseja pedir?\n")
+		leia(opcao)
+		se (opcao < 1 ou opcao >4){
+			escreva("OPÇÃO INVÁLIDA!")
+			
+		}senao{	
+		escolha(opcao){
+
+			caso 1: 
+				limpa()
+				dinheiro =  6.00
+				
+			pare
+			
+			caso 2:
+				limpa()
+				dinheiro = 12.00
+			pare
+			
+			caso 3:
+				limpa()
+				dinheiro = 15.00
+				
+			pare
+			
+			caso 4:
+				limpa()
+				dinheiro = 8.00
+				
+			pare
+			
+			}
+		escreva("quantas unidades? ")
+		leia(quantidade)
+		valor = valor + dinheiro * quantidade
+		escreva("Deseja mais alguma coisa? s/n ")
+		leia(escolhe)
+		se(escolhe == 's'){
+			limpa()
+			menu(opcao)
+		}
+			limpa()
+		 	escreva("sua conta ficou R$:", valor," \nvolte sempre!")
+				}
+		
+		}
+}
